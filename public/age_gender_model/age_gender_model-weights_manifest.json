@@ -1,0 +1,44 @@
+{
+    "format": "graph-model",
+    "generatedBy": "TensorFlow.js",
+    "convertedBy": "TensorFlow.js Converter",
+    "modelTopology": {
+        "node": [
+            {
+                "name": "input_1",
+                "op": "Placeholder",
+                "attr": {
+                    "dtype": {"type": "DT_FLOAT"},
+                    "shape": {"shape": {"dim": [{"size": -1}, {"size": 224}, {"size": 224}, {"size": 3}]}}
+                }
+            }
+        ]
+    },
+    "weightsManifest": [
+        {
+            "paths": ["age_gender_model-shard1"],
+            "weights": [
+                {"name": "entry_flow/conv_in/filters", "shape": [3,3,3,32], "dtype": "float32"},
+                {"name": "entry_flow/conv_in/bias", "shape": [32], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_0/separable_conv0/depthwise_filter", "shape": [3,3,32,1], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_0/separable_conv0/pointwise_filter", "shape": [1,1,32,64], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_0/separable_conv0/bias", "shape": [64], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_0/separable_conv1/depthwise_filter", "shape": [3,3,64,1], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_0/separable_conv1/pointwise_filter", "shape": [1,1,64,64], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_0/separable_conv1/bias", "shape": [64], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_0/expansion_conv/filters", "shape": [1,1,32,64], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_0/expansion_conv/bias", "shape": [64], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_1/separable_conv0/depthwise_filter", "shape": [3,3,64,1], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_1/separable_conv0/pointwise_filter", "shape": [1,1,64,128], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_1/separable_conv0/bias", "shape": [128], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_1/separable_conv1/depthwise_filter", "shape": [3,3,128,1], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_1/separable_conv1/pointwise_filter", "shape": [1,1,128,128], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_1/separable_conv1/bias", "shape": [128], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_1/expansion_conv/filters", "shape": [1,1,64,128], "dtype": "float32"},
+                {"name": "entry_flow/reduction_block_1/expansion_conv/bias", "shape": [128], "dtype": "float32"},
+                {"name": "fc/age/weights", "shape": [512,1], "dtype": "float32"},
+                {"name": "fc/age/bias", "shape": [1], "dtype": "float32"}
+            ]
+        }
+    ]
+}

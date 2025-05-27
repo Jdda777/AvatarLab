@@ -1,0 +1,1 @@
+Start-Process python -ArgumentList "animegan2-pytorch/api.py" -WindowStyle Normal 

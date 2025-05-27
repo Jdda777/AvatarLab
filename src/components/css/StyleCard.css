@@ -1,0 +1,36 @@
+.unhovered {
+    transform: rotateY(0deg); /* Estado inicial sin giro */
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d; /* Para mantener la perspectiva */
+}
+
+.hovered {
+    transform: rotateY(180deg); /* Giro de 180 grados */
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.hidden {
+    opacity: 0;
+    scale: 0%;
+    transition: opacity 0.3s ease;
+}
+
+.showing {
+    opacity: 1;
+    scale:100%;
+    transition: opacity 0.3s ease;
+}
+
+.occult {
+    opacity: 0;
+    scale: 0%;
+    transition: opacity 0.3s ease;
+}
+
+.visible {
+    opacity: 1;
+    scale: 100%;
+    transition: opacity 0.3s ease;
+     transform: rotateY(180deg);
+}
